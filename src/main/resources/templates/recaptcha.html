@@ -4,9 +4,10 @@
   
   <script>
     function onSubmit(token) {
-    	
-      console.log("Token = " + token);
-      alert('thanks ' + document.getElementById('field').value);
+
+    alert('Obrigado ' + document.getElementById('field').value + " o token gerado= " +token);
+    console.log("Token = " + token);
+    alert('thanks ' + document.getElementById('field').value);
     }
 
     function validate(event) {
@@ -30,14 +31,22 @@
   
   </head>
   <body>
+
+  <h1> TELA COM RECAPTCHA IMPLEMENTADO </h1>
+
+  <div style="margin-top: 100px; margin-left:100px;">
     <form>
-      Name: <input id="field" name="field">
+      <p>Name:</p>
+      <input id="field" name="field">
+      <p></p>
       <div id='recaptcha' class="g-recaptcha"
           data-sitekey="6LeK31YeAAAAAEdCBQOEFRuC4c7UQZT3p0ll-5-m"
           data-callback="onSubmit"
           data-size="invisible"></div>
       <button id='submit'>submit</button>
     </form>
+    </div>
+
    
     <script>onload();</script>
     

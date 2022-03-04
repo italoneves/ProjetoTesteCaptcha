@@ -1,7 +1,7 @@
 async function onSubmit(token) {
 	
     console.log("TOKEN = " + token);
-    alert('Obrigado ' + document.getElementById('field').value);
+    alert('Obrigado ' + document.getElementById('field').value + " token gerado= " +token);
     console.log(document.getElementById('field').value);
 
   }

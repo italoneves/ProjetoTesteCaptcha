@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+  <head>
+    <title>2 - hCaptcha Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <a href="https://hcaptcha.com/privacy">Privacy Policy</a> and
+	<a href="https://hcaptcha.com/terms">Terms of Service</a> apply.
+	 
+   
+    
+  </head>
+  <body>
+  <!--  
+   <script>
+	 var teste = function() {
+	    console.log("CAPTCHA has loaded!");
+	    hcaptcha.execute();
+	    console.log("print 2");
+	  };
+	</script>
+	
+	-->
+
+    <script src="https://js.hcaptcha.com/1/api.js" async defer ></script>
+  
+  
+    <form>
+      <p>Name: (required)</p> 
+       <input id="field" name="field" />
+       <p></p>
+
+    <div
+        id="hcaptcha"
+        class="h-captcha"
+        data-sitekey="c32ff52d-c50b-401a-a284-1547c76e1a6f"
+        data-callback="onSubmit"
+        data-size="invisible">
+
+    </div>
+
+      <button id="submit">Enviar</button>
+
+    </form>
+    
+    
+   
+   <script th:src="@{/invisible.js}"></script>
+    
+  </body>
+</html>
